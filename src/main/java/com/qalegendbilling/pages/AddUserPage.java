@@ -34,6 +34,18 @@ public class AddUserPage extends TestHelperUtility{
 	private final String _saveButton="submit_user_button";  
 	@FindBy(id=_saveButton)
 	private WebElement saveButton;
+	private final String _firstNameValidate="first_name-error";  
+	@FindBy(id=_firstNameValidate)
+	private WebElement firstNameValidate;
+	private final String _emailValidate="email-error";  
+	@FindBy(id=_emailValidate)
+	private WebElement emailValidate;
+	private final String _passwordValidate="password-error";  
+	@FindBy(id=_passwordValidate)
+	private WebElement passwordValidate;
+	private final String _confirmpassValidate="confirm_password-error";  
+	@FindBy(id=_confirmpassValidate)
+	private WebElement confirmpassValidate;
 	
 	public void enterFirstName(String firstName) {
 		page.enterText(firstNameField,firstName);
@@ -64,5 +76,19 @@ public class AddUserPage extends TestHelperUtility{
 	public UsersPage clickOnSaveButton() {
 		page.clickOnElement(saveButton);
 		return new UsersPage(driver);
+	}
+	public void clickOnSavebutton() {
+		page.clickOnElement(saveButton);
+	}
+	public String getAddUserPageTitle() {
+		String title=page.getPageTitle(driver);
+		return title;
+	}
+	public String validationMessage(String errorMessage) {
+		page.getElementText(firstNameValidate);
+		page.getElementText(emailValidate);
+		page.getElementText(passwordValidate);
+		page.getElementText(confirmpassValidate);
+		return errorMessage;
 	}
 }

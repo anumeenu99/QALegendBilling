@@ -12,7 +12,7 @@ public class HomePage extends TestHelperUtility{
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	private final String _signoutOption="//a[@class='dropdown-toggle']//span[text()='efg pqr']";  
+	private final String _signoutOption="//a[@class='dropdown-toggle']//following-sibling::span";  
 	@FindBy(xpath=_signoutOption)
 	private WebElement signoutOption;
 	private final String _signoutButton="//a[text()='Sign Out']";  
@@ -24,6 +24,9 @@ public class HomePage extends TestHelperUtility{
 	private final String _usersTab="/html/body/div[2]/aside/section/ul/li[2]/ul/li[1]/a";  
 	@FindBy(xpath=_usersTab)
 	private WebElement usersTab;
+	private final String _rolesTab="//i[@class='fa fa-briefcase']//following::span[1]";  
+	@FindBy(xpath=_rolesTab)
+	private WebElement rolesTab;
 	
 	public String getHomePageTitle() {
 		String title=page.getPageTitle(driver);
@@ -42,6 +45,10 @@ public class HomePage extends TestHelperUtility{
 	public UsersPage clickOnUsersTab() {
 		page.clickOnElement(usersTab);
 		return new UsersPage(driver);
+	}
+	public RolesPage clickOnRolesButton() {
+		page.clickOnElement(rolesTab);
+		return new RolesPage(driver);
 	}
 	
 }

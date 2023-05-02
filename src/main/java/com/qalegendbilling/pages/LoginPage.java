@@ -38,6 +38,9 @@ public class LoginPage extends TestHelperUtility{
 	private final String _resetErrorMessage="//span[@class='help-block']//following-sibling::strong";  
 	@FindBy(xpath=_resetErrorMessage)
 	private WebElement resetErrorMessage;
+	private final String _newUserAccount="username";  
+	@FindBy(id=_newUserAccount)
+	private WebElement newUserAccount;
 	
 	public String getLoginPageTitle() {
 		String title=page.getPageTitle(driver);
@@ -77,6 +80,9 @@ public class LoginPage extends TestHelperUtility{
 	public void enterLoginCredentials(String username,String pass) {
 		page.enterText(usernameField,username);
 		page.enterText(passwordField,pass);
+	}
+	public void enterNewUserName(String username) {
+		page.enterText(newUserAccount,username);
 	}
 	
 }

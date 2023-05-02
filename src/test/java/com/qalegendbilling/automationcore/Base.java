@@ -39,20 +39,20 @@ public class Base {
 		}
 	}
 
-	@BeforeMethod(alwaysRun = true)   //configuration 
+	/*@BeforeMethod(alwaysRun = true)   //configuration 
 	@Parameters({ "browser" })
 	public void setUP(String browserName) {
 		String url = prop.getProperty("url");
 		driver = DriverFactory.testInitialization(browserName);
 		driver.get(url);
-	}
-	/*@BeforeMethod(alwaysRun = true)
+	}*/
+	@BeforeMethod(alwaysRun = true)
 	public void setUP() {
 		String browser = prop.getProperty("browser");
 		String url = prop.getProperty("url");
 		driver = DriverFactory.testInitialization(browser);
 		driver.get(url);
-	}*/
+	}
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult result) throws IOException {
@@ -61,7 +61,7 @@ public class Base {
 			File screenshot = takeScreenshot.getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(screenshot, new File("./Screenshots/" + result.getName() + ".png"));
 		}
-		driver.quit();
+		//driver.quit();
 	}
 
 	@BeforeSuite
