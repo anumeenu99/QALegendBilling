@@ -32,7 +32,7 @@ public class UsersTest extends UsersBaseTest{
 	}
 	
 	@Test(priority = 1, enabled = true, description = "TC011 verify User Search With Valid Data",groups= {"Sanity"})
-	public void TC_011_verifyUserSearchWithValidData() throws InterruptedException {
+	public void TC_011_verifyUserSearchWithValidData(){
 		userSearchWithValidData();
 	}
 	
@@ -47,12 +47,12 @@ public class UsersTest extends UsersBaseTest{
 	}
 	
 	@Test(priority = 1, enabled = true, description = "TC019 verify User Can Delete A User",groups= {"Sanity"})
-	public void TC_019_verifyUserCanDeleteAUser() throws InterruptedException {
+	public void TC_019_verifyUserCanDeleteAUser(){
 		userCanDeleteUser();
 	}
 	
 	@Test(priority = 1, enabled = true, description = "TC020 verify User Can View Use Details",groups= {"Sanity"})
-	public void TC_020_verifyUserCanViewUserDetails() throws InterruptedException {
+	public void TC_020_verifyUserCanViewUserDetails() {
 		userCanViewDetails();
 	}
 	

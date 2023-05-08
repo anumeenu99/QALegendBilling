@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.qalegendbilling.utilities.TestHelperUtility;
+import com.qalegendbilling.utilities.WaitUtility;
 
 public class UsersPage extends TestHelperUtility{
 	public WebDriver driver;
@@ -22,7 +23,7 @@ public class UsersPage extends TestHelperUtility{
 	private final String _usernameField="username";  
 	@FindBy(id=_usernameField)
 	private WebElement usernameField;
-	private final String _errorMessage="//td[@class='dataTables_empty']";  
+	private final String _errorMessage="//td[text()='No matching records found']";  
 	@FindBy(xpath=_errorMessage)
 	private WebElement errorMessage;
 	private final String _editButton="//i[@class='glyphicon glyphicon-edit']";  
@@ -57,9 +58,16 @@ public class UsersPage extends TestHelperUtility{
 		page.clickOnElement(searchField);
 	}
 	public void enterUsername(String username) {
+		wait.setHardWait();
+		wait.waitForElementToBeVisible(driver, _searchField,WaitUtility.LocatorType.Xpath);
 		page.enterText(searchField,username);
 	}
+	public void usermail(String umail) {
+		page.enterText(searchField,umail);
+	}
 	public String getErrorMessage() {
+		wait.setHardWait();
+		wait.waitForElementToBeVisible(driver, _errorMessage,WaitUtility.LocatorType.Xpath);
 		String errMessage=page.getElementText(errorMessage);
 		return errMessage;
 	}
@@ -67,6 +75,8 @@ public class UsersPage extends TestHelperUtility{
 		page.enterText(searchField,editname);
 	}
 	public EditUserPage clickOnEditButton() {
+		wait.setHardWait();
+		wait.waitForElementToBeVisible(driver, _editButton,WaitUtility.LocatorType.Xpath);
 		page.clickOnElement(editButton);
 		return new EditUserPage(driver);
 	}
@@ -74,6 +84,8 @@ public class UsersPage extends TestHelperUtility{
 		page.enterText(deleteUser,delUser);
 	}
 	public void clickOnDeleteButton() {
+		wait.setHardWait();
+		wait.waitForElementToBeVisible(driver, _deleteButton,WaitUtility.LocatorType.Xpath);
 		page.clickOnElement(deleteButton);
 	}
 	public void clickOnPopupButton() {
@@ -83,6 +95,8 @@ public class UsersPage extends TestHelperUtility{
 		page.enterText(searchField,viewuser);
 	}
 	public ViewUserPage clickOnViewButton() {
+		wait.setHardWait();
+		wait.waitForElementToBeVisible(driver, _viewButton,WaitUtility.LocatorType.Xpath);
 		page.clickOnElement(viewButton);
 		return new ViewUserPage(driver);
 	}

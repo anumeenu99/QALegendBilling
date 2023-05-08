@@ -39,7 +39,7 @@ public class HomeTest extends HomeBaseTest{
 	}
 	
 	@Test(priority = 1, enabled = true, description = "TC009 verif yUser Management Sub Tabs",groups= {"Sanity"})
-	public void TC_021_verifyRolesPageTitle() {
+	public void TC_021_verifyRolesPageTitle(){
 		rolesPageTitle();
 	}
 }

@@ -4,8 +4,9 @@ public class ExtentLogMessage {
 	public static final String LOGIN_BUTTON_CLICKED="Clicking login button";
 	public static final String ENDTOUR_BUTTON_CLICKED="Clicking end tour button";
 	public static final String TITLE_VALIDATION="Title validation is completed successfully";
-	public static final String USERNAME_CLICKED="Clicking username field";
-	public static final String PASSWORD_CLICKED="Clicking password field";
+	public static final String MESSAGE_VALIDATION="message validation is completed successfully";
+	public static final String USERNAME_CLICKED="username is entered successfully";
+	public static final String PASSWORD_CLICKED="password is entered successfully";
 	public static final String PROFILE_BUTTON_CLICKED="Clicking profile button";
 	public static final String SIGNOUT_BUTTON_CLICKED="Clicking signout button";
 	public static final String USER_MANAGEMENT_SUBTAB="Clicking user management sub tab";
@@ -19,6 +20,28 @@ public class ExtentLogMessage {
 	public static final String EMAIL_ASSERTION="forget password email is asserted successfully";
 	public static final String CLICK_USERS_TAB="users tab is clicked successfully";
 	public static final String ACTUAL_TITLE_RECEIVED="actual users page title is received successfully";
-
-	
+	public static final String CLICK_ADD_BUTTON="add button is clicked successfully";
+	public static final String FIRST_NAME_ENTER="first name is enter successfully";
+	public static final String EMAIL_ENTER="enter entered successfully";
+	public static final String USERNAME_ENTER="username entered successfully";
+	public static final String PASSWORD_ENTER="password entered successfully";
+	public static final String CONFIRM_PASSWORD_ENTER="confirm password entered successfully";
+	public static final String SAVE_BUTTON_CLICK="save button is clicked successfully";
+	public static final String ROLES_BUTTON_CLICK="roles button is clicked successfully";
+	public static final String EDIT_BUTTON_CLICK="edit button is clicked successfully";
+	public static final String ENTER_LAST_NAME="last name is entered successfully";
+	public static final String UPDATE_BUTTON_CLICK="update button is clicked successfully";
+	public static final String PROFILE_BUTTON_CLICK="profile button is clicked successfully";
+	public static final String ROLES_NAME_ENTER="roles name is entered successfully";
+	public static final String ROLES_CHECKBOX_CLICK="roles checkbox is clicked successfully";
+	public static final String ADDROLES_BUTTON_CLICK="add roles button is clicked successfully";
+	public static final String ENTER_ROLE="role is entered successfully";
+	public static final String DELETE_BUTTON_CLICK="delete button is clicked successfully";
+	public static final String POPUP_BUTTON_CLICK="popup button is clicked successfully";
+	public static final String SALES_COMMISSION_TAB="sales commission tab is clicked successfully";
+	public static final String USER_EMAIL_ENTER="user email is entered successfully";
+	public static final String ENTER_NAME_TO_DELETE="user is deleted successfully";
+	public static final String ENTER_NAME_TO_VIEW="name is entered successfully for viewing the details";
+	public static final String VIEW_BUTTON_CLICK="view button is clicked successfully";
+	public static final String ENTER_DELETE_SALES="agent for deleting is entered successfully";
 }

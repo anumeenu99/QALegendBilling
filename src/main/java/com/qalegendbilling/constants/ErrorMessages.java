@@ -13,4 +13,5 @@ public class ErrorMessages {
 	public static final String ADD_ROLES_PAGE_TITLE="Error: Invalid title found";
 	public static final String VIEW_EMAIL_VALIDATE="Error: Invalid email found";
 	public static final String EDIT_ROLES_PAGE_TITLE="Error: Invalid title found";
+	public static final String SALES_PAGE_TITLE="Error: Invalid title found";
 }

@@ -75,6 +75,7 @@ public class HomeBaseTest extends Base{
 		login.enterPassword(passwd);
 		extentTest.get().log(Status.PASS,ExtentLogMessage.PASSWORD_CLICKED);
 		home=login.clickLoginButton();
+		extentTest.get().log(Status.PASS,ExtentLogMessage.LOGIN_BUTTON_CLICKED);
 		login.clickOnEndTourButton();
 		extentTest.get().log(Status.PASS,ExtentLogMessage.ENDTOUR_BUTTON_CLICKED);
 		home.clickOnUsermanageSubTab();
@@ -82,21 +83,28 @@ public class HomeBaseTest extends Base{
 	}
 	
 	public void rolesPageTitle() {
-		//extentTest.get().assignCategory("Sanity");
+		extentTest.get().assignCategory("Sanity");
 		login=new LoginPage(driver);
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("LoginPage");
 		String uname=data.get(1).get(1);
 		String passwd=data.get(1).get(2);
 		login.enterUserName(uname);
+		extentTest.get().log(Status.PASS,ExtentLogMessage.USERNAME_CLICKED);
 		login.enterPassword(passwd);
+		extentTest.get().log(Status.PASS,ExtentLogMessage.PASSWORD_CLICKED);
 		home=login.clickLoginButton();
+		extentTest.get().log(Status.PASS,ExtentLogMessage.LOGIN_BUTTON_CLICKED);
 		login.clickOnEndTourButton();
+		extentTest.get().log(Status.PASS,ExtentLogMessage.ENDTOUR_BUTTON_CLICKED);
 		home.clickOnUsermanageSubTab();
+		extentTest.get().log(Status.PASS,ExtentLogMessage.USER_MANAGEMENT_SUBTAB);
 		roles=new RolesPage(driver);
 		roles=home.clickOnRolesButton();
+		extentTest.get().log(Status.PASS,ExtentLogMessage.ROLES_BUTTON_CLICK);
 		List<ArrayList<String>> data1=ExcelUtility.excelDataReader("RolesPage");
 		String expectedTitle = data1.get(1).get(0);
 		String actualTitle=roles.getRolesPageTitle();
 		Assert.assertEquals(expectedTitle,actualTitle,ErrorMessages.ROLES_PAGE_TITLE);
+		extentTest.get().log(Status.PASS,ExtentLogMessage.TITLE_VALIDATION);
 	}
 }

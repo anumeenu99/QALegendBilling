@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.qalegendbilling.utilities.TestHelperUtility;
+import com.qalegendbilling.utilities.WaitUtility;
 public class HomePage extends TestHelperUtility{
 	public WebDriver driver;
 	public HomePage(WebDriver driver){ 
@@ -24,9 +25,12 @@ public class HomePage extends TestHelperUtility{
 	private final String _usersTab="/html/body/div[2]/aside/section/ul/li[2]/ul/li[1]/a";  
 	@FindBy(xpath=_usersTab)
 	private WebElement usersTab;
-	private final String _rolesTab="//i[@class='fa fa-briefcase']//following::span[1]";  
+	private final String _rolesTab="//i[@class='fa fa-briefcase']//following-sibling::span";  
 	@FindBy(xpath=_rolesTab)
 	private WebElement rolesTab;
+	private final String _salesCommission="//i[@class='fa fa-handshake-o']";  
+	@FindBy(xpath=_salesCommission)
+	private WebElement salesCommission;
 	
 	public String getHomePageTitle() {
 		String title=page.getPageTitle(driver);
@@ -47,8 +51,16 @@ public class HomePage extends TestHelperUtility{
 		return new UsersPage(driver);
 	}
 	public RolesPage clickOnRolesButton() {
+		wait.setHardWait();
+		wait.waitForElementToBeVisible(driver, _rolesTab,WaitUtility.LocatorType.Xpath);
 		page.clickOnElement(rolesTab);
 		return new RolesPage(driver);
+	}
+	public SalesCommissionPage clickOnSalesCommissionTab() {
+		wait.setHardWait();
+		wait.waitForElementToBeVisible(driver, _salesCommission,WaitUtility.LocatorType.Xpath);
+		page.clickOnElement(salesCommission);
+		return new SalesCommissionPage(driver);
 	}
 	
 }

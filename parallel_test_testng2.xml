@@ -14,12 +14,12 @@
 			</class>
 		</classes>
 	</test> <!-- Test -->
-	<test thread-count="5" name="chrome-parallel testing-test" parallel="methods">
+	<test thread-count="5" name="FireFox-parallel testing-test" parallel="methods">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.qalegendbilling.testscript.LoginTest">
 				<methods>
-					<include name="TC_003_verifyInvalidUserCredentials" />
+					<include name="TC_001_verifyLoginPageTitle" />
 				</methods>
 			</class>
 		</classes>

@@ -75,24 +75,33 @@ public class LoginBaseTest extends Base{
 	}
 	
 	public void newLoginUser() {
-		//extentTest.get().assignCategory("Smoke");
+		extentTest.get().assignCategory("Smoke");
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("LoginPage");
 		String uname=data.get(1).get(1);
 		String passwd=data.get(1).get(2);
 		login=new LoginPage(driver);
 		home=new HomePage(driver);
 		login.enterUserName(uname);
+		extentTest.get().log(Status.PASS,ExtentLogMessage.USERNAME_CLICKED);
 		login.enterPassword(passwd);
+		extentTest.get().log(Status.PASS,ExtentLogMessage.PASSWORD_CLICKED);
 		login.clickLoginButton();
+		extentTest.get().log(Status.PASS,ExtentLogMessage.LOGIN_BUTTON_CLICKED);
 		login.clickOnEndTourButton();
+		extentTest.get().log(Status.PASS,ExtentLogMessage.ENDTOUR_BUTTON_CLICKED);
 		home.clickOnEfgpqrButton();
+		extentTest.get().log(Status.PASS,ExtentLogMessage.PROFILE_BUTTON_CLICK);
 		login=home.clickOnSignoutButton();
+		extentTest.get().log(Status.PASS,ExtentLogMessage.SIGNOUT_BUTTON_CLICKED);
 		login=new LoginPage(driver);
 		List<ArrayList<String>> data1=ExcelUtility.excelDataReader("LoginPage");
 		String uname1=data1.get(1).get(4);
 		String passwd1=data1.get(1).get(5);
 		login.enterNewUserName(uname1);
+		extentTest.get().log(Status.PASS,ExtentLogMessage.USERNAME_CLICKED);
 		login.enterPassword(passwd1);
+		extentTest.get().log(Status.PASS,ExtentLogMessage.PASSWORD_CLICKED);
 		home=login.clickLoginButton();
+		extentTest.get().log(Status.PASS,ExtentLogMessage.LOGIN_BUTTON_CLICKED);
 	}
 }

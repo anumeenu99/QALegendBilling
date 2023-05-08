@@ -22,6 +22,9 @@ public class AddRolesPage extends TestHelperUtility{
 	private final String _saveButton="//button[@class='btn btn-primary pull-right']";  
 	@FindBy(xpath=_saveButton)
 	private WebElement saveButton;
+	private final String _viewRole="//form[@id='role_add_form']//div[@class='row check_group'][2]//div[@class='col-md-12'][2]//div[@class='checkbox']";  
+	@FindBy(xpath=_viewRole)
+	private WebElement viewRole;
 	
 	public String getAddRolesPageTitle() {
 		String title=page.getPageTitle(driver);
@@ -32,6 +35,9 @@ public class AddRolesPage extends TestHelperUtility{
 	}
 	public void clickOnRolesCheckBox() {
 		page.clickOnElement(rolesCheckBox);
+	}
+	public void clickOnViewRole() {
+		page.clickOnElement(viewRole);
 	}
 	public RolesPage clickOnSaveButton() {
 		page.clickOnElement(saveButton);

@@ -27,12 +27,12 @@ public class EditUserTest extends EditUserBaseTest{
 	
 	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
 	@Test(priority = 1, enabled = true, description = "TC017 verify Add User Page Title",groups= {"Sanity"})
-	public void TC_017_verifyEditUserPageTitle() throws InterruptedException {
+	public void TC_017_verifyEditUserPageTitle(){
 		editUserPageTitle();
 	}
 	
 	@Test(priority = 1, enabled = true, description = "TC018 verify User Can Edit",groups= {"Sanity"})
-	public void TC_018_verifyUserCanEdit() throws InterruptedException {
+	public void TC_018_verifyUserCanEdit() {
 		userCanEdit();
 	}
 }

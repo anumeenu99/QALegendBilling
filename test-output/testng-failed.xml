@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qalegendbilling.testscript.HomeTest">
+      <class name="com.qalegendbilling.testscript.SalesCommissionTest">
         <methods>
+          <include name="TC_029_verifyUserCanAddSalesAgent"/>
           <include name="setUP"/>
-          <include name="TC_021_verifyRolesPageTitle"/>
           <include name="tearDown"/>
           <include name="setExtent"/>
         </methods>
-      </class> <!-- com.qalegendbilling.testscript.HomeTest -->
+      </class> <!-- com.qalegendbilling.testscript.SalesCommissionTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

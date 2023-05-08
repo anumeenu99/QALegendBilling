@@ -15,7 +15,7 @@
 		</classes>
 	</test> <!-- Test -->
 	<test thread-count="5" name="edge-parallel testing-methods" parallel="methods">
-		<parameter name="browser" value="FireFox" />
+		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.qalegendbilling.testscript.LoginTest">
 				<methods>
