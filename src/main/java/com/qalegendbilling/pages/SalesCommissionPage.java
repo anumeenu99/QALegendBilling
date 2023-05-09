@@ -65,6 +65,8 @@ public class SalesCommissionPage extends TestHelperUtility{
 		page.clickOnElement(addButton);
 	}
 	public void enterFirstName(String fname) {
+		wait.setHardWait();
+		wait.waitForElementToBeVisible(driver, _firstNameField,WaitUtility.LocatorType.Xpath);
 		page.enterText(firstNameField,fname);
 	}
 	public void enterlastName(String lname) {
@@ -73,7 +75,7 @@ public class SalesCommissionPage extends TestHelperUtility{
 	public void enterEmail(String emailid) {
 		page.enterText(emailField,emailid);
 	}
-	public void enterContact(String contactnumber) {
+	/*public void enterContact(String contactnumber) {
 		page.enterText(contactField,contactnumber);
 	}
 	public void enterAddress(String addressdetails) {
@@ -81,7 +83,7 @@ public class SalesCommissionPage extends TestHelperUtility{
 	}
 	public void enterSales(String salesPercentage) {
 		page.enterText(salesField,salesPercentage);
-	}
+	}*/
 	public void clickOnSaveButton() {
 		page.clickOnElement(saveButton);
 	}

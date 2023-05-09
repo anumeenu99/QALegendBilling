@@ -18,22 +18,22 @@ public class RolesTest extends RolesBaseTest{
 	AddRolesPage addroles;
 	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
 	
-	@Test(priority = 1, enabled = true, description = "TC022 verify Add Roles Page Title",groups= {"Sanity"})
+	@Test(priority = 1, enabled = true, description = "TC022 verify Add Roles Page Title",groups= {"Regression"})
 	public void TC_022_verifyAddRolesPageTitle(){
 		addRolesPageTitle();
 	}
 	
-	@Test(priority = 1, enabled = true, description = "TC023 verify Use Can Add Roles",groups= {"Sanity"})
+	@Test(priority = 1, enabled = true, description = "TC023 verify Use Can Add Roles",groups= {"Regression"})
 	public void TC_023_verifyUserCanAddRoles() {
 		addRoles();
 	}
 	
-	@Test(priority = 1, enabled = true, description = "TC024 verify Edit Role Page Title",groups= {"Sanity"})
+	@Test(priority = 1, enabled = true, description = "TC024 verify Edit Role Page Title",groups= {"Regression"})
 	public void TC_024_verifyEditRolePageTitle() {
 		editRolePageTitle();
 	}
 	
-	@Test(priority = 1, enabled = true, description = "TC026 verify User Can Delete A Role",groups= {"Sanity"})
+	@Test(priority = 1, enabled = true, description = "TC026 verify User Can Delete A Role",groups= {"Regression"})
 	public void TC_026_verifyUserCanDeleteARole() {
 		userCanDeleteRoleFromList();
 	}

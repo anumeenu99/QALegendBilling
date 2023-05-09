@@ -26,12 +26,12 @@ public class EditUserTest extends EditUserBaseTest{
 	EditUserPage edituser;
 	
 	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
-	@Test(priority = 1, enabled = true, description = "TC017 verify Add User Page Title",groups= {"Sanity"})
+	@Test(priority = 1, enabled = true, description = "TC017 verify Add User Page Title",groups= {"Regression"})
 	public void TC_017_verifyEditUserPageTitle(){
 		editUserPageTitle();
 	}
 	
-	@Test(priority = 1, enabled = true, description = "TC018 verify User Can Edit",groups= {"Sanity"})
+	@Test(priority = 1, enabled = true, description = "TC018 verify User Can Edit",groups= {"Regression"})
 	public void TC_018_verifyUserCanEdit() {
 		userCanEdit();
 	}

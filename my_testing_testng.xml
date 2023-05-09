@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="grouping Suite">
+	<listeners>
+		<listener class-name="com.qalegendbilling.listeners.TestListener"/>
+	</listeners>
+  <test thread-count="5" name="parameter testing grouping">
+	  <parameter name="browser" value="chrome"/>
+	  <groups>
+		  <run>
+			  <include name="Smoke"/>
+			  <include name="Sanity"/>
+			  <include name="Regression"/>
+		  </run>
+	  </groups>
+    <classes>
+      <class name="com.qalegendbilling.testscript.LoginTest"/>   
+      <class name="com.qalegendbilling.testscript.UsersTest"/>
+      <class name="com.qalegendbilling.testscript.HomeTest"/>
+      <class name="com.qalegendbilling.testscript.AddRolesTest"/>
+      <class name="com.qalegendbilling.testscript.AddUserTest"/>
+      <class name="com.qalegendbilling.testscript.EditRolesTest"/>
+      <class name="com.qalegendbilling.testscript.EditSalesTest"/>
+      <class name="com.qalegendbilling.testscript.EditUserTest"/>
+      <class name="com.qalegendbilling.testscript.RegisterTest"/>
+      <class name="com.qalegendbilling.testscript.ResetTest"/>
+      <class name="com.qalegendbilling.testscript.RolesTest"/>
+      <class name="com.qalegendbilling.testscript.SalesCommissionTest"/>
+      <class name="com.qalegendbilling.testscript.ViewUserTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

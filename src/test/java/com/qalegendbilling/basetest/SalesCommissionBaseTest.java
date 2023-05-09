@@ -18,6 +18,7 @@ import com.qalegendbilling.pages.ResetPage;
 import com.qalegendbilling.pages.SalesCommissionPage;
 import com.qalegendbilling.pages.UsersPage;
 import com.qalegendbilling.utilities.ExcelUtility;
+import com.qalegendbilling.utilities.RandomUtility;
 
 public class SalesCommissionBaseTest extends Base{
 	HomePage home;
@@ -68,19 +69,12 @@ public class SalesCommissionBaseTest extends Base{
 		sales=new SalesCommissionPage(driver);
 		sales=home.clickOnSalesCommissionTab();
 		sales.clickOnAddButton();
-		List<ArrayList<String>> data1=ExcelUtility.excelDataReader("SalesPage");
-		String firstName = data1.get(1).get(1);
-		String lastName =data1.get(1).get(2);
-		String email=data1.get(1).get(3);
-		String contact=data1.get(1).get(4);
-		String address=data1.get(1).get(5);
-		String salespercent=data1.get(1).get(6);
-		sales.enterFirstName(firstName);
-		sales.enterlastName(lastName);
+		String fname=RandomUtility.getfName();
+		sales.enterFirstName(fname);
+		String lname=RandomUtility.getlName();
+		sales.enterlastName(lname);
+		String email=RandomUtility.getRandomEmail();
 		sales.enterEmail(email);
-		sales.enterContact(contact);
-		sales.enterAddress(address);
-		sales.enterSales(salespercent);
 		sales.clickOnSaveButton();
 	}
 	
@@ -97,13 +91,13 @@ public class SalesCommissionBaseTest extends Base{
 		home.clickOnUsermanageSubTab();
 		sales=new SalesCommissionPage(driver);
 		sales=home.clickOnSalesCommissionTab();
-		List<ArrayList<String>> data1=ExcelUtility.excelDataReader("SalesPage");
+		/*List<ArrayList<String>> data1=ExcelUtility.excelDataReader("SalesPage");
 		String firstName = data1.get(1).get(1);
 		sales.enterSalesFname(firstName);
 		editsales=sales.clickOnEditButton();
 		String lastName =data1.get(1).get(7);
 		sales.enterlastName(lastName);
-		sales.clickOnSaveButton();
+		sales.clickOnSaveButton();*/
 	}
 	
 	public void userCanDeleteSales() {

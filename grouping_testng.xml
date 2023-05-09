@@ -8,17 +8,15 @@
 	  <parameter name="browser" value="chrome"/>
 	  <groups>
 		  <run>
-			  <exclude name="Smoke"/>
-			  <include name="Sanity"/>
+			  <include name="Smoke"/>
+			  <exclude name="Sanity"/>
 			  <exclude name="Regression"/>
 		  </run>
 	  </groups>
     <classes>
-      <class name="com.qalegendbilling.testscript.LoginTest"/>
-      <class name="com.qalegendbilling.automationcore.DriverFactory"/>
-      <class name="com.qalegendbilling.testscript.UsersTest"/>
+      <class name="com.qalegendbilling.testscript.LoginTest"/>   
+     <class name="com.qalegendbilling.testscript.UsersTest"/>
       <class name="com.qalegendbilling.testscript.HomeTest"/>
-      <class name="com.qalegendbilling.automationcore.Base"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

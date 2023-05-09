@@ -28,7 +28,7 @@ public class EditUserBaseTest extends Base{
 	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
 	
 	public void editUserPageTitle(){
-		extentTest.get().assignCategory("Sanity");
+		extentTest.get().assignCategory("Regression");
 		login=new LoginPage(driver);
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("LoginPage");
 		String uname=data.get(1).get(1);
@@ -60,7 +60,7 @@ public class EditUserBaseTest extends Base{
 	}
 	
 	public void userCanEdit() {
-		extentTest.get().assignCategory("Sanity");
+		extentTest.get().assignCategory("Regression");
 		login=new LoginPage(driver);
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("LoginPage");
 		String uname=data.get(1).get(1);

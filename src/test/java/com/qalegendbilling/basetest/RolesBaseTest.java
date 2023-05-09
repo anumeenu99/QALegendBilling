@@ -27,7 +27,7 @@ public class RolesBaseTest extends Base{
 	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
 	
 	public void addRolesPageTitle(){
-		extentTest.get().assignCategory("Sanity");
+		extentTest.get().assignCategory("Regression");
 		login=new LoginPage(driver);
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("LoginPage");
 		String uname=data.get(1).get(1);
@@ -55,7 +55,7 @@ public class RolesBaseTest extends Base{
 	}
 	
 	public void addRoles(){
-		extentTest.get().assignCategory("Sanity");
+		extentTest.get().assignCategory("Regression");
 		login=new LoginPage(driver);
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("LoginPage");
 		String uname=data.get(1).get(1);
@@ -87,7 +87,7 @@ public class RolesBaseTest extends Base{
 	}
 	
 	public void editRolePageTitle(){
-		extentTest.get().assignCategory("Sanity");
+		extentTest.get().assignCategory("Regression");
 		login=new LoginPage(driver);
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("LoginPage");
 		String uname=data.get(1).get(1);
@@ -127,7 +127,7 @@ public class RolesBaseTest extends Base{
 	}
 	
 	public void userCanDeleteRoleFromList(){
-		extentTest.get().assignCategory("Sanity");
+		extentTest.get().assignCategory("Regression");
 		login=new LoginPage(driver);
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("LoginPage");
 		String uname=data.get(1).get(1);
